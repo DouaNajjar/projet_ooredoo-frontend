@@ -1,0 +1,176 @@
+<!-- <div class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4 ">
+                <div>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Ooredoo_logo_2017.png"
+                    alt="Ooredoo logo"
+                    class="img-fluid"
+                    style="width: 185px;"
+                  />
+                </div>
+
+                <form [formGroup]="userForm" noValidate>
+
+                  <div class="form-outline mb-4">
+                    <input 
+                      formControlName="username"
+                      type="email"
+                      id="username"
+                      class="form-control text-center"
+                      placeholder="please enter username here"
+                      aria-label="Username"
+                    />
+                    @if(username?.errors?.['required'] && (username?.dirty || username?.touched)){
+                      <div class="alert alert-danger">
+                        username is required.
+                      </div>
+                    }
+                    @else if(username?.errors?.['maxlength'] && (username?.touched || username?.dirty)){
+                      <div class="alert alert-danger">
+                        username must be under 25 caracters.
+                      </div>
+                    }
+                    @else if(UsernameIsInvalidPattern() && (username?.touched || username?.dirty)){
+                      <div class="alert alert-danger">
+                        username's pattern is invalid.
+                      </div>
+                    }
+                    <label class="form-label" for="username">Username</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      formControlName="password"
+                      placeholder="please enter password here"
+                      type="password"
+                      id="password"
+                      class="form-control text-center"
+                      aria-label="Password"
+                    />
+                    @if (password?.errors?.['required'] && (password?.touched || password?.dirty)) {
+                      <div class="alert alert-danger">password is required</div>
+                    }
+                    @else if(password?.errors?.['maxlength'] && (password?.touched || password?.dirty)){
+                      <div class="alert alert-danger">
+                        password must be equal to 8 caracters.
+                      </div>
+                    }
+                    @else if(PasswordIsInvalidPattern() && (password?.touched || password?.dirty)){ 
+                      <div class="alert alert-danger">password pattern is invalid</div>
+                    }
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+                  
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button
+                      class="btn btn-primary btn-block gradient-custom-2 mb-3"
+                      type="button"
+                      [disabled]="userForm.invalid"
+                    >
+                      Log in
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="small mb-0">welcome to ooredoo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ -->
+
+
+
+ <div class="login-container">
+  <div class="login-form">
+    <img
+      src="https://www.ooredoo.qa/web/wp-content/uploads/2022/08/ooredoo-og-image.png"
+      alt="Ooredoo "
+      class="logo"
+    />
+    <h2>Welcome to ooredoo</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <!-- Nom et prénom -->
+      <div class="form-group">
+        <label for="username">Nom et Prénom</label>
+        <input
+          id="username"
+          formControlName="username"
+          type="text"
+          class="form-control"
+        />
+        @if(userForm.get('username')?.invalid && userForm.get('username')?.touched) {
+          <div class="error">
+            @if(userForm.get('username')?.errors?.['required']) {
+              <p>Ce champ est obligatoire.</p>
+            }
+            @if(userForm.get('username')?.errors?.['pattern']) {
+              <p>Nom et prénom doivent contenir uniquement des lettres et suivre cette format: nom.prenom</p>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Mot de passe -->
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input
+          id="password"
+          formControlName="password"
+          type="text"
+          class="form-control"
+        />
+        @if(userForm.get('password')?.invalid && userForm.get('password')?.touched) {
+          <div class="error">
+            @if(userForm.get('password')?.errors?.['required']) {
+              <p>Ce champ est obligatoire.</p>
+            }
+            @if(userForm.get('password')?.errors?.['pattern']) {
+              <p>Le mot de passe doit contenir :</p>
+              <ul>
+                <li>Au moins 8 caractères.</li>
+                <li>Au moins une lettre majuscule.</li>
+                <li>Au moins une lettre minuscule.</li>
+                <li>Au moins un chiffre.</li>
+                <li>Au moins un caractère spécial (e.g., !#$%^&*).</li>
+              </ul>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Bouton de connexion -->
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="userForm.invalid"
+      >
+        Connexion
+      </button>
+    </form>
+  </div>
+</div>
+

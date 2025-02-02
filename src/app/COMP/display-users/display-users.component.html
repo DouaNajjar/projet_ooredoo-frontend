@@ -1,0 +1,48 @@
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">firstname</th>
+            <th scope="col">lastname</th>
+            <th scope="col" colspan="7" rowspan="1">Adresse</th>
+            <th scope="col">role</th>
+            <th scope="col">modifications</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(u of users; track $index){
+        <tr>
+            <th scope="row">{{u.getId()}}</th>
+            <td>{{u.getInfo().getFirstname()}}</td>
+            <td>{{u.getInfo().getLastname()}}</td>
+
+            <td>{{u.getInfo().getAdresse().getCountry()}}</td>
+            <td>{{u.getInfo().getAdresse().getPostalCode()}}</td>
+            <td>{{u.getInfo().getAdresse().getGovernorate().name}}</td>
+            <td>{{u.getInfo().getAdresse().getCity()}}</td>
+            <td>{{u.getInfo().getAdresse().getNeighborhood()}}</td>
+            <td>{{u.getInfo().getAdresse().getStreet()}}</td>
+            <td>{{u.getInfo().getAdresse().getHouseNumber()}}</td>
+
+            <td>
+                <span class="badge rounded-pill" [ngClass]="{
+                                'bg-danger ': u.getRole().getName() === 'admin',
+                                'bg-primary': u.getRole().getName() === 'responsable',
+                                'bg-success': u.getRole().getName() === 'user'
+                              }">{{ u.getRole().getName() }}                
+                </span>
+
+            </td>
+            <td colspan="2">
+                <button class="btn btn-primary btn-sm me-2" (click)="sendToEdit(u.getId())">
+                    <i class="bi bi-pencil-fill"></i> Edit
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="onDelete(u.getId())">
+                    <i class="bi bi-trash-fill"></i> Delete
+                </button>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table> -->

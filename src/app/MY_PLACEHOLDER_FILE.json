@@ -1,0 +1,610 @@
+{
+  "users": [
+      {
+          "id": 1,
+          "info": {
+              "id": 101,
+              "firstname": "Ahmed",
+              "lastname": "BenAli",
+              "adresse": {
+                  "street": "Rue de la Liberté",
+                  "number": 15,
+                  "neighborhood": "Cité Ennasr",
+                  "city": "Ariana",
+                  "postalCode": "2037",
+                  "governorate": "Tunis",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Password123!",
+          "role": { "id": 3, "name": "admin" }
+      },
+      {
+          "id": 2,
+          "info": {
+              "id": 102,
+              "firstname": "Salma",
+              "lastname": "Trabelsi",
+              "adresse": {
+                  "street": "Avenue Habib Bourguiba",
+                  "number": 10,
+                  "neighborhood": "Cité El Ghazela",
+                  "city": "Ariana",
+                  "postalCode": "2083",
+                  "governorate": "Ariana",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Securepass456@",
+          "role": { "id": 1, "name": "user" }
+      },
+      {
+          "id": 3,
+          "info": {
+              "id": 103,
+              "firstname": "Mounir",
+              "lastname": "Jemaa",
+              "adresse": {
+                  "street": "Rue Ibn Khaldoun",
+                  "number": 25,
+                  "neighborhood": "Cité Olympique",
+                  "city": "Tunis",
+                  "postalCode": "1002",
+                  "governorate": "Tunis",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "mypassword789",
+          "role": { "id": 2, "name": "responsable" }
+      },
+      {
+          "id": 4,
+          "info": {
+              "id": 104,
+              "firstname": "Hela",
+              "lastname": "Jaziri",
+              "adresse": {
+                  "street": "Avenue Mohamed V",
+                  "number": 32,
+                  "neighborhood": "El Menzah",
+                  "city": "Tunis",
+                  "postalCode": "1003",
+                  "governorate": "Tunis",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "passwordHela123",
+          "role": { "id": 1, "name": "user" }
+      },
+      {
+          "id": 5,
+          "info": {
+              "id": 105,
+              "firstname": "Khaled",
+              "lastname": "Mansouri",
+              "adresse": {
+                  "street": "Rue du 20 Mars",
+                  "number": 40,
+                  "neighborhood": "Cité Intilaqa",
+                  "city": "Ben Arous",
+                  "postalCode": "2015",
+                  "governorate": "Ben Arous",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Khaled@2022",
+          "role": { "id": 3, "name": "admin" }
+      },
+      {
+          "id": 6,
+          "info": {
+              "id": 106,
+              "firstname": "Samar",
+              "lastname": "Zarrouk",
+              "adresse": {
+                  "street": "Avenue Ali Belhaouane",
+                  "number": 50,
+                  "neighborhood": "La Marsa",
+                  "city": "Tunis",
+                  "postalCode": "2050",
+                  "governorate": "Tunis",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "secureSamar789",
+          "role": { "id": 1, "name": "user" }
+      },
+      {
+          "id": 7,
+          "info": {
+              "id": 107,
+              "firstname": "Amine",
+              "lastname": "Boudjema",
+              "adresse": {
+                  "street": "Rue du 7 novembre",
+                  "number": 14,
+                  "neighborhood": "Cité El Yasmine",
+                  "city": "Sousse",
+                  "postalCode": "4000",
+                  "governorate": "Sousse",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Amine1234!",
+          "role": { "id": 2, "name": "responsable" }
+      },
+      {
+          "id": 8,
+          "info": {
+              "id": 108,
+              "firstname": "Khalil",
+              "lastname": "Ben Ali",
+              "adresse": {
+                  "street": "Rue Taha Hussein",
+                  "number": 3,
+                  "neighborhood": "Cité El Ferdaous",
+                  "city": "Nabeul",
+                  "postalCode": "8000",
+                  "governorate": "Nabeul",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "KhalilNabeul@2025",
+          "role": { "id": 3, "name": "admin" }
+      },
+      {
+          "id": 9,
+          "info": {
+              "id": 109,
+              "firstname": "Sara",
+              "lastname": "Belkhiria",
+              "adresse": {
+                  "street": "Avenue Habib Bourguiba",
+                  "number": 5,
+                  "neighborhood": "Sidi Abdelhamid",
+                  "city": "Mahdia",
+                  "postalCode": "5100",
+                  "governorate": "Mahdia",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Sara2024!",
+          "role": { 
+            "id": 1, 
+            "name": "user" 
+          }
+      },
+      {
+          "id": 10,
+          "info": {
+              "id": 110,
+              "firstname": "Nadia",
+              "lastname": "Ben Hassen",
+              "adresse": {
+                  "street": "Rue Bourguiba",
+                  "number": 9,
+                  "neighborhood": "El Jabal",
+                  "city": "Kairouan",
+                  "postalCode": "3100",
+                  "governorate": "Kairouan",
+                  "country": "Tunisie"
+              }
+          },
+          "password": "Nadia1234!",
+          "role": { "id": 2, "name": "responsable" }
+      }
+  ],
+  "governorate": [
+    {
+      "id": 1,
+      "governorate": "Tunis",
+      "cities": [
+        "Tunis",
+        "Bardo",
+        "Kram",
+        "Goulette",
+        "Carthage",
+        "Sidi Bou Said",
+        "Marsa",
+        "Sidi Hassine"
+      ]
+    },
+    {
+      "id": 2,
+      "governorate": "Ariana",
+      "cities": [
+        "Ariana",
+        "La Soukra",
+        "Raoued",
+        "Kalaat el-Andalous",
+        "Sidi Thabet",
+        "Ettadhamen-Mnihla"
+      ]
+    },
+    {
+      "id": 3,
+      "governorate": "Ben Arous",
+      "cities": [
+        "Ben Arous",
+        "El Mourouj",
+        "Hammam Lif",
+        "Hammam Chott",
+        "Bou Mhel el-Bassatine",
+        "Ezzahra",
+        "Rades",
+        "Megrine",
+        "Mohamedia-Fouchana",
+        "Mornag",
+        "Khalidia"
+      ]
+    },
+    {
+      "id": 4,
+      "governorate": "Manouba",
+      "cities": [
+        "Manouba",
+        "Den Den",
+        "Douar Hicher",
+        "Oued Ellil",
+        "Mornaguia",
+        "Borj El Amri",
+        "Djedeida",
+        "Tebourba",
+        "El Battan"
+      ]
+    },
+    {
+      "id": 5,
+      "governorate": "Nabeul",
+      "cities": [
+        "Nabeul",
+        "Dar Chaabane",
+        "Beni Khiar",
+        "El Maamoura",
+        "Somaa",
+        "Korba",
+        "Tazerka",
+        "Menzel Temime",
+        "Menzel Horr",
+        "El Mida",
+        "Kelibia",
+        "Azmour",
+        "Hammam Ghezeze",
+        "Dar Allouch",
+        "El Haouaria",
+        "Takelsa",
+        "Soliman",
+        "Korbous",
+        "Menzel Bouzelfa",
+        "Beni Khalled",
+        "Zaouiet Djedidi",
+        "Grombalia",
+        "Bou Argoub",
+        "Hammamet"
+      ]
+    },
+    {
+      "id": 6,
+      "governorate": "Zaghouan",
+      "cities": [
+        "Zaghouan",
+        "Zriba",
+        "Bir Mcherga",
+        "Djebel Oust",
+        "El Fahs",
+        "Nadhour"
+      ]
+    },
+    {
+      "id": 7,
+      "governorate": "Bizerte",
+      "cities": [
+        "Bizerte",
+        "Sejnane",
+        "Mateur",
+        "Menzel Bourguiba",
+        "Tinja",
+        "Ghar al Milh",
+        "Aousja",
+        "Menzel Jemil",
+        "Menzel Abderrahmane",
+        "El Alia",
+        "Ras Jebel",
+        "Metline",
+        "Raf Raf"
+      ]
+    },
+    {
+      "id": 8,
+      "governorate": "Beja",
+      "cities": [
+        "Beja",
+        "El Maagoula",
+        "Zahret Medien",
+        "Nefza",
+        "Teboursouk",
+        "Testour",
+        "Goubellat",
+        "Majaz al Bab"
+      ]
+    },
+    {
+      "id": 9,
+      "governorate": "Jendouba",
+      "cities": [
+        "Jendouba",
+        "Bou Salem",
+        "Tabarka",
+        "Ain Draham",
+        "Fernana",
+        "Beni M'Tir",
+        "Ghardimaou",
+        "Oued Melliz"
+      ]
+    },
+    {
+      "id": 10,
+      "governorate": "Kef",
+      "cities": [
+        "El Kef",
+        "Nebeur",
+        "Touiref",
+        "Sakiet Sidi Youssef",
+        "Tajerouine",
+        "Menzel Salem",
+        "Kalaat es Senam",
+        "Kalaat Khasba",
+        "Jerissa",
+        "El Ksour",
+        "Dahmani",
+        "Sers"
+      ]
+    },
+    {
+      "id": 11,
+      "governorate": "Siliana",
+      "cities": [
+        "Siliana",
+        "Bou Arada",
+        "Gaafour",
+        "El Krib",
+        "Sidi Bou Rouis",
+        "Maktar",
+        "Rouhia",
+        "Kesra",
+        "Bargou",
+        "El Aroussa"
+      ]
+    },
+    {
+      "id": 12,
+      "governorate": "Sousse",
+      "cities": [
+        "Sousse",
+        "Ksibet Thrayet",
+        "Ezzouhour",
+        "Zaouiet Sousse",
+        "Hammam Sousse",
+        "Akouda",
+        "Kalaa Kebira",
+        "Sidi Bou Ali",
+        "Hergla",
+        "Enfidha",
+        "Bouficha",
+        "Sidi El Hani",
+        "M'saken",
+        "Kalaa Seghira",
+        "Messaadine",
+        "Kondar"
+      ]
+    },
+    {
+      "id": 13,
+      "governorate": "Monastir",
+      "cities": [
+        "Monastir",
+        "Khniss",
+        "Ouerdanin",
+        "Sahline Mootmar",
+        "Sidi Ameur",
+        "Zeramdine",
+        "Beni Hassen",
+        "Ghenada",
+        "Jemmal",
+        "Menzel Kamel",
+        "Zaouiet Kontoch",
+        "Bembla-Mnara",
+        "Menzel Ennour",
+        "El Masdour",
+        "Moknine",
+        "Sidi Bennour",
+        "Menzel Farsi",
+        "Amiret El Fhoul",
+        "Amiret Touazra",
+        "Amiret El Hojjaj",
+        "Cherahil",
+        "Bekalta",
+        "Teboulba",
+        "Ksar Hellal",
+        "Ksibet El Mediouni",
+        "Benen Bodher",
+        "Touza",
+        "Sayada",
+        "Lemta",
+        "Bouhjar",
+        "Menzel Hayet"
+      ]
+    },
+    {
+      "id": 14,
+      "governorate": "Mahdia",
+      "cities": [
+        "Mahdia",
+        "Rejiche",
+        "Bou Merdes",
+        "Ouled Chamekh",
+        "Chorbane",
+        "Hebira",
+        "Essouassi",
+        "El Djem",
+        "Kerker",
+        "Chebba",
+        "Mellouleche",
+        "Sidi Alouane",
+        "Ksour Essef",
+        "El Bradaa"
+      ]
+    },
+    {
+      "id": 15,
+      "governorate": "Sfax",
+      "cities": [
+        "Sfax",
+        "Sakiet Ezzit",
+        "Chihia",
+        "Sakiet Eddaier",
+        "Gremda",
+        "El Ain",
+        "Thyna",
+        "Agareb",
+        "Jebiniana",
+        "El Hencha",
+        "Menzel Chaker",
+        "Ghraiba, Tunisia",
+        "Bir Ali Ben Khelifa",
+        "Skhira",
+        "Mahares",
+        "Kerkennah"
+      ]
+    },
+    {
+      "id": 16,
+      "governorate": "Kairouan",
+      "cities": [
+        "Kairouan",
+        "Chebika",
+        "Sbikha",
+        "Oueslatia",
+        "Ain Djeloula",
+        "Haffouz",
+        "Alaa",
+        "Hajeb El Ayoun",
+        "Nasrallah",
+        "Menzel Mehiri",
+        "Echrarda",
+        "Bou Hajla"
+      ]
+    },
+    {
+      "id": 17,
+      "governorate": "Kasserine",
+      "cities": [
+        "Kasserine",
+        "Sbeitla",
+        "Sbiba",
+        "Jedelienne",
+        "Thala",
+        "Haidra",
+        "Foussana",
+        "Feriana",
+        "Thelepte",
+        "Magel Bel Abbes"
+      ]
+    },
+    {
+      "id": 18,
+      "governorate": "Sidi Bouzid",
+      "cities": [
+        "Sidi Bouzid",
+        "Jilma",
+        "Cebalet",
+        "Bir El Hafey",
+        "Sidi Ali Ben Aoun",
+        "Menzel Bouzaiane",
+        "Meknassy",
+        "Mezzouna",
+        "Regueb",
+        "Ouled Haffouz"
+      ]
+    },
+    {
+      "id": 19,
+      "governorate": "Gabes",
+      "cities": [
+        "Gabès",
+        "Chenini Nahal",
+        "Ghannouch",
+        "Metouia",
+        "Oudhref",
+        "El Hamma",
+        "Matmata",
+        "Nouvelle Matmata",
+        "Mareth",
+        "Zarat"
+      ]
+    },
+    {
+      "id": 20,
+      "governorate": "Mednine",
+      "cities": [
+        "Medenine",
+        "Beni Khedache",
+        "Ben Gardane",
+        "Zarzis",
+        "Houmt El Souk (Djerba)",
+        "Midoun (Djerba)",
+        "Ajim (Djerba)"
+      ]
+    },
+    {
+      "id": 21,
+      "governorate": "Tataouine",
+      "cities": [
+        "Tataouine",
+        "Ghomrassen",
+        "Dkhila",
+        "Souf",
+        "Bir Lahmar",
+        "Mareth",
+        "Medinine"
+      ]
+    },
+    {
+      "id": 22,
+      "governorate": "Tozeur",
+      "cities": [
+        "Tozeur",
+        "Tamerza",
+        "Nefta",
+        "Chbika",
+        "Hassi El Ghella"
+      ]
+    },
+    {
+      "id": 23,
+      "governorate": "Gafsa",
+      "cities": [
+        "Gafsa",
+        "Metlaoui",
+        "Redeyef",
+        "Mdhila",
+        "El Guettar",
+        "Ksar",
+        "Belkhir",
+        "Chedia",
+        "Jemna"
+      ]
+    },
+    {
+      "id": 24,
+      "governorate": "Tunis",
+      "cities": [
+        "Tunis",
+        "La Marsa",
+        "Sidi Bou Said",
+        "La Goulette",
+        "Le Kram"
+      ]
+    }
+  ]
+}

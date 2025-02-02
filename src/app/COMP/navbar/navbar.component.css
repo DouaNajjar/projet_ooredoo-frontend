@@ -1,0 +1,12 @@
+ul{gap: 50px;}
+.active{transform: scale(1.2);}
+
+.nav-fixed {
+    position: fixed;        /* Fixes the nav to the screen */
+    top: 0;                 /* Places it at the top of the viewport */
+    left: 0;                /* Aligns it to the left edge */
+    width: 100%;            /* Optional: Makes the nav take up the full width */
+    z-index: 1000;          /* Optional: Ensures the nav stays on top of other elements */
+    background-color: #ffffff; /* Optional: Makes the nav background solid */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
+}

@@ -1,0 +1,165 @@
+    <div class="container-fluid position-relative">
+        <div class="row">
+            <div class="col-lg-3 position-fixed end-0 vh-100" style="width: 30%; overflow-y: auto;">
+                <div class="navbar-expand-lg py-4 px-3">
+                    <div class="d-grid mb-4">
+                        <button type="button" class="navbar-toggler btn btn-white" data-bs-toggle="collapse"
+                            data-bs-target="#navbarVerticalNavMenuEg1" aria-label="Toggle navigation"
+                            aria-expanded="false" aria-controls="navbarVerticalNavMenuEg1">
+                            <span class="d-flex justify-content-between align-items-center">
+                                <span class="text-dark">Filter</span>
+                                <span class="navbar-toggler-default"><i class="bi-list"></i></span>
+                                <span class="navbar-toggler-toggled"><i class="bi-x"></i></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="navbarVerticalNavMenuEg1" class="collapse navbar-collapse show">
+                        <div class="w-100">
+                            <form>
+                                <div class="mb-5">
+                                    <h5 class="mb-3">Search users</h5>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+
+                                    <h5 class="mb-3">Search clients</h5>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                    <!--
+                  <h5 class="mb-3 mt-4">Search by role:</h5>
+                   Select 
+                  <select class="form-select form-select-sm">
+                    <option value="">Show all roles</option>
+                    @for(r of roles; track $index){
+                      <option value=r.name>{{r.name}}</option>
+                    }
+                  </select>
+                  End Select
+                  -->
+                                    <h5 class="mb-3 mt-4">Type Payment</h5>
+                                    <div class="d-grid gap-2">
+                                        @for(p of payment; track $index){
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentType" [value]="p"[(ngModel)]="paymentType" (change)="filter()">
+                                            <label class="form-check-label">{{p}}</label>
+                                        </div>
+                                        }
+                                    </div>
+
+                                    <h5 class="mb-3 mt-4">status</h5>
+                                    <div class="d-grid gap-2">
+                                        @for(t of stat; track $index){
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" [value]="t.id"[(ngModel)]="status" (change)="filter()">
+                                            <label class="form-check-label">{{t.name}}</label>
+                                        </div>
+                                        }
+                                    </div>
+
+                                    <h5 class="mb-3 mt-4">Search by shops:</h5>
+                                    <select class="form-select form-select-sm" [(ngModel)]="shop_name" name="shop_name" (change)="filter()">
+                                        <option [value]="">Show all shops</option>
+                                        @for(s of shops; track $index){
+                                        <option [value]="s.name">{{s.name}}</option>
+                                        }
+                                    </select>
+
+                                    <h5 class="mb-3 mt-4">Type Client</h5>
+                                    <div class="d-grid gap-2">
+                                        @for(t of typeclient; track $index){
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="client_type" [value]="t" [(ngModel)]="client_type" (change)="filter()">
+                                            <label class="form-check-label">{{t}}</label>
+                                        </div>
+                                        }
+                                    </div>
+
+                                    <!--debut Date & Time Picker   ADD DATE TO FILTER
+                                    <h5 class="mb-3 mt-4">Select Date & Time</h5>
+                                    <div class="mb-3">
+                                        <input type="datetime-local" class="form-control form-control-sm"  name="selectedDateTime">
+                                    </div>
+                                    fin Date & Time Picker -->
+
+                                    <!-- <label>id of gov</label><input type="text" [(ngModel)]="" (input)="filter()" name="id_gov">
+                                    <label>name of gov</label><input type="text" [(ngModel)]="" (input)="filter()" name="name_gov"> -->
+
+                                    <div class="d-grid mt-4">
+                                        <button type="button" class="btn btn-outline-danger btn-transition mt-2"
+                                            (click)="resetFilter()">Clear all</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9" style="margin-right: 30%;">
+                <div class="content py-4">
+                    <div style="width: 90%;">
+
+
+                        <!-- HERE GOES THE DISPLAY OF THE FILTERED TRANSACTIONS -->
+                        <div class="container mt-5">
+                            <h2 class="mb-4">Transactions</h2>
+                            <!-- Transaction Accordion for Multiple Entries -->
+                            <div class="accordion" id="transactionAccordion">
+                                <div class="row">
+                                    @for(t of transactions; track $index){
+                                        <div class="col-md-12 mb-4">
+                                            <div class="card">
+                                                <div class="card-header" id="heading{{ t.getId() }}">
+                                                    <h5 class="mb-0">
+                                                        <!-- attr.aria-controls="'collapse' + t.getId()" aria-expanded="false" data-toggle="collapse" -->
+                                                        <button>
+                                                            Toggle Collapse  
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <!-- aria-labelledby="heading{{ t.getId() }}" -->
+                                                <div>
+                                                    <fieldset class="client-info">
+                                                        <legend>Client Information</legend>
+                                                        <p><strong>Client Name:</strong>{{t.getClient().getFirstname()}}-{{t.getClient().getLastname()}}</p>
+                                                        <p><strong>SIM:</strong>{{t.getClient().getSIM()}}</p>
+                                                        <p><strong>CIN:</strong>{{t.getClient().getCIN()}}</p>
+                                                    </fieldset>
+                        
+                                                    <fieldset class="offer-info">
+                                                        <legend>Offer Information</legend>
+                                                        <p><strong>Offer:</strong>{{t.getOffer().getName()}}-{{t.getOffer().getCategory().getName()}}</p>
+                                                        <p><strong>Price:</strong>{{t.getOffer().getPrice()}}</p>
+                                                        <p><strong>VOIP Number:</strong>{{t.getOffer().getVOIP_num()}}</p>
+                                                        <p><strong>validity:</strong>{{t.getOffer().getValidity_period()}} months</p>
+                                                    </fieldset>
+                        
+                                                    <fieldset class="transactions-details">
+                                                        <legend>Transaction Details</legend>
+                                                        <p><strong>Date:</strong>{{t.getDateTransaction() | date:'dd/MM/yyyy HH:mm'}}</p> 
+                                                        <p><strong>Status:</strong>{{t.getStatus()}}</p>
+                                                        <p><strong>Payment:</strong>{{t.getPaymentType()}}</p>
+                                                        <p><strong>Client Type:</strong>{{t.getClientType()}}</p>
+                                                        <p><strong>Shop:</strong>{{t.getShop().getName()}}</p>
+                                                        <p><strong>User:</strong>{{t.getUser().getFirstname()}}-{{t.getUser().getLastname()}} ({{t.getUser().getUsername()}})</p>
+                                                        <p><strong>Kit Code:</strong>{{t.getKitCode()}}</p>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    @empty{
+                                        <div class="no-transactions-message">No transactions found.</div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                        <!-- {{transactions | json}} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

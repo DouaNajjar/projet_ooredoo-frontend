@@ -1,0 +1,87 @@
+.sidebar{
+    border-radius: 5px;
+    box-shadow: 2px;
+    width: 20%;
+}
+
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    background-color: #ffffff;
+    font-size: 0.875rem;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    font-size: 0.875rem;
+  }
+  
+  .pagination li {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  /* Styling for client information section */
+  .client-info, .offer-info, .transaction-details {
+    background-color: #EEEEEE;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .client-info p, .offer-info p, .transactions-details p{
+    flex: 1 1 200px;
+    margin: 5px 10px;
+  }
+  
+  fieldset {
+    border: 1px solid #007bff;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1rem;
+  }
+
+  /* Styling for transaction details section */
+.transaction-details {
+    background-color: #EEEEEE;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    display: block; /* Ensures content stacks vertically */
+  }
+  
+  .transaction-details p {
+    margin: 5px 0; /* Space between elements */
+  }
+  
+  .no-transactions-message {
+    text-align: center;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #007bff;  /* You can use your primary color or choose another */
+    font-weight: bold;
+    background-color: #f8f9fa;  /* Light background for contrast */
+    padding: 20px;
+    border: 2px solid #007bff;  /* Border to make it stand out */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 30px;
+    max-width: 500px; /* Limit width */
+    margin-left: auto;
+    margin-right: auto;
+}
+  
